@@ -49,3 +49,7 @@ git checkout -b "nome_da_branch"
 #Unir as alterações de outra branch para a branch atual
 git merge nome_outra_branch
 
+#para ignorar na pasta  criar arquivo .gitigore e colocar arquivos e pastas para ser ignorado
+arquivo.txt
+node_modules/*
+
