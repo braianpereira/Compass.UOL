@@ -1,0 +1,14 @@
+#Iniciar a pasta como reposotório local
+git init
+
+#Verificar os status do reposotório
+git status
+
+#Adcionar todas as alterações na pasta do projeto para o reposotório local
+git add .
+
+#Adcionar as alterações de um item na pasta do projeto para o reposotório local
+git add arquivo_texte.txt
+
+#Commit das altarações
+git commit -m "Mensagem sobre as alterações feitas"
