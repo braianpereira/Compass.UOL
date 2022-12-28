@@ -1,0 +1,53 @@
+#Verificar branchs disponpíveis
+git branch
+
+#Criar nova branch ficando na branch atual
+git branch "nome_da_branch"
+
+#Entrar na branch
+git checkout "nome_da_branch"
+
+#Criar nova branch e entrar nela
+git checkout -b "nome_da_branch"
+
+#Remover branch
+git branch -d "nome_da_branch"
+
+#Unir as alterações de outra branch para a branch atual
+git merge nome_outra_branch
+
+#Para colocar as alerações no "lixo"
+git stash
+
+#Verificar as stashs
+git stash list
+
+#Verificar as alterações na stash
+git stash show -p id
+
+#Para recuperar as alterações do "lixo"
+git stash apply id
+
+#Limpando todas as stashs
+git stash clear
+
+#Removendo uma stash especifca
+git stash drop id
+
+#Versionamento das branchs com as tags
+git tag -a v1.0 -m "Comentario"
+
+#Verificando as tags
+git tag
+
+#Verificando as alterações da tag
+git show tag v1.0
+
+#Voltando a versão para a tag
+git checkout v1.0
+
+#Enviando tag para o repositório
+git push origin v1.0
+
+#Enviando todas as tags para o repositório
+git push origin --tags

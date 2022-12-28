@@ -1,0 +1,9 @@
+#show
+git show
+git show <tag>
+
+#Exibir diferenças entre local e remoto
+git diff branch
+
+#Verificar log curto
+git shortlog

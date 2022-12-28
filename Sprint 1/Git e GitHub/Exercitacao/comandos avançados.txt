@@ -1,0 +1,15 @@
+#Trazer mapeamento remoto
+git fetch
+
+#enviar atualizações de branchs
+git push 
+
+#subModulos
+# para adicionar submodulo
+git submodule add link_repositorio
+
+# para verificar submodulo
+git submodule
+
+#para realizar o push do submodulo
+git push --recursive-submodules=on-demand

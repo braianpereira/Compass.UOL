@@ -1,0 +1,51 @@
+#Clonar repositórios remotos
+git clone "link do repositório"
+
+#Iniciar a pasta como reposotório local
+git init
+
+#Adicionar reposotório remoto
+git add origin "link do reposotório"
+
+#Verificar repositórios remotos
+git remote -v
+
+#Remover repositórios remote
+git remote rm origin
+
+#Verificar os status do reposotório
+git status
+
+#Adcionar todas as alterações na pasta do projeto para o reposotório local
+git add .
+
+#Adcionar as alterações de um item na pasta do projeto para o reposotório local
+git add arquivo_texte.txt
+
+#Commit das altarações
+git commit -m "Mensagem sobre as alterações feitas"
+
+#Enviar as alterações do Commit para o reposotório remoto
+git push
+
+#Trazer as alterações do repositório remoto
+git pull
+
+#Excluir arquivo do repositório local e remoto
+git rm nome_do_arquivo
+
+#Mover arquivo mantendo a tracking
+git mv nome_arquivo caminho/novo_nome_arquivo
+
+#Verificar as alterações no projeto, para sair Ctrl + Q (WIN) Ctrl + C (Linux)
+git log
+
+#Restalrando alterações
+git checkout nome_do_arquivo
+
+#para ignorar na pasta  criar arquivo .gitigore e colocar arquivos e pastas para ser ignorado
+arquivo.txt
+node_modules/*
+
+#Resetar repositório local removendo alterações, inclusive commits sem push
+git reset --hard origin/master

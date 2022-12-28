@@ -1,0 +1,11 @@
+#Limpar arquivos untrackeds
+git clean
+
+#Remove arquivos não mais necessários no repositório
+git gc
+
+#Checar integridade dos arquivos
+git fsck
+
+#Log de referencia
+git reflog
