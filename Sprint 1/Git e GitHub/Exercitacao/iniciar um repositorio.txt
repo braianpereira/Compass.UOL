@@ -1,3 +1,6 @@
+#Clonar repositórios remotos
+git clone "link do repositório"
+
 #Iniciar a pasta como reposotório local
 git init
 
@@ -24,3 +27,25 @@ git commit -m "Mensagem sobre as alterações feitas"
 
 #Enviar as alterações do Commit para o reposotório remoto
 git push
+
+#Trazer as alterações do repositório remoto
+git pull
+
+#Excluir arquivo do repositório local e remoto
+git rm nome_do_arquivo
+
+#Mover arquivo mantendo a tracking
+git mv nome_arquivo caminho/novo_nome_arquivo
+
+#Verificar as alterações no projeto, para sair Ctrl + Q (WIN) Ctrl + C (Linux)
+git log
+
+#Restalrando alterações
+git checkout nome_do_arquivo
+
+#Criar nova branch e entrar nela
+git checkout -b "nome_da_branch"
+
+#Unir as alterações de outra branch para a branch atual
+git merge nome_outra_branch
+
