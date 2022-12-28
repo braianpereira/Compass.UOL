@@ -1,6 +1,15 @@
 #Iniciar a pasta como reposotório local
 git init
 
+#Adicionar reposotório remoto
+git add origin "link do reposotório"
+
+#Verificar repositórios remotos
+git remote -v
+
+#Remover repositórios remote
+git remote rm origin
+
 #Verificar os status do reposotório
 git status
 
@@ -12,3 +21,6 @@ git add arquivo_texte.txt
 
 #Commit das altarações
 git commit -m "Mensagem sobre as alterações feitas"
+
+#Enviar as alterações do Commit para o reposotório remoto
+git push
