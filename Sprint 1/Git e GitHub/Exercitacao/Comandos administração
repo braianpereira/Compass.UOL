@@ -9,3 +9,6 @@ git fsck
 
 #Log de referencia
 git reflog
+
+#Backup repo, compacta repo
+git archive --format zip --output nome_arquivo.zip nome_branch

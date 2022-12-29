@@ -1,0 +1,34 @@
+Evitar criar vários commits para não encher log com commits desnecessários
+Para evitar isso criar private branches
+Será criado branch que não será compartilhado com o repositório.
+no fim realizar um rebase.
+git rebase <branch_atual> <branch_privado> -i
+
+git checkout -b branch_atual
+git checkout -b private_branch_atual
+
+#realizar diversas alterações e commits
+#voltar para a branch_atual
+git checkout branch_atual
+
+git rebase branch_atual branch_privado -i
+
+#aqui abrira uma tela com os commits com a palavra pick na frente
+#altarar de pick para squash os commits desnecessários que serão unidos
+#alterar de pick para reword os commits que devem permanecer mas alterar a mensagem.
+#Deixar como pick os que não precisam de alteração nenhuma
+
+#para cada alteração Esc -> :x! -> Enter
+
+Boas mensagem de commits
+* Separar assundo do corpo da mensagem;
+* assundo com no máximo 50 caracteres;
+* Assunto com letra inicial maiúscula;
+* Corpo com no máximo 72 carct;
+* Explicar o por que e como do commitm e não como o código foi escrito;
+
+
+
+
+
+
