@@ -1,0 +1,27 @@
+Ao criar coloque nome objetivo
+
+descrição e licença.
+
+Na licença se não souber qual colocar utilize a MIT License
+
+# Em trabalhos com equipes nunca usar o merge para a branch master/main
+Realziar Pull Requests e apenas o responsovel em verificar os Pulls fará o merge com a master/main
+
+Na guia action é possivel criar o CI/CD do projeto com diversos templates dependendo da linguagem do projeto.
+
+Na guia Project é possível controlar todo o Life-Cicle do projeto com o Kamban
+
+Wiki
+#Criação de paginas com a documentação do projeto
+
+Insights
+#informações desde a criação do repositório
+para ativar essas funcionalidades tem que ter o GitHub Pro ou o Repositório tem que ser publico
+
+Settings
+Configurações do repositório.
+
+===
+
+GISTs
+repositório de pequenas soluções para tarefas recorrentes.
