@@ -45,6 +45,7 @@ _Ainda não realizado_
     git pull
     ```
 - Manutenção de branchs (criação, checkout, merge)
+
    *Listar as branchs*
     ```git
     git branch
