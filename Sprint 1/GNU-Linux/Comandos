@@ -1,0 +1,216 @@
+Mostra caminho atual
+pwd
+
+Listar arquivos 
+ls
+
+Troca de diretório
+cd
+
+Ir para home
+cd ~
+
+Verificar buffer da tela
+Shift + PageUp
+
+Criar alias de comando
+alias ls="ls --color"
+
+Para criar pastas com subpastas usar o -p
+mkdir -p dir/subdir/subsubdir
+
+Para buscar comandos já executados escrever parte e usar Ctrl + R
+
+Para ver a estrutura de diretorios
+tree
+
+Verificar tamanho dos arquivos
+du
+du -h
+du -hs
+du -hs *
+
+Visualização de texto
+cat nome_arquivo
+
+Visualização de texto muito grande
+more nome_arquivo
+**  enter mostra nova linha e espaço nova pagina
+** "Q"  ou "Ctrl C" sair
+
+Visualização de texto muito grande com mais comandos
+less nome_arquivo
+** direcional para subir e descer no texto
+** :numero pula numero de linhas 
+** /termo de busca para buscar texto "Shift + N" para voltar uma ocorrencia "N" para ir para a próxima ocorrencia
+** "Q"  ou "Ctrl C" sair
+
+Visualizar as primeiras linhas do arquivo
+head nome_arquivo
+
+Visualizar as ultimas linhas do arquivo
+tail nome_arquivo
+
+Filtrar saidas/arquivos
+grep "comando"
+grep nome_arquivo
+grep diretório
+
+filtrar buscando uma palavra
+grep palavra nome_arquivo
+
+filtrar excluindo uma palavra
+grep palavra nome_arquivo
+
+filtrar recursivamente
+grep -r palavra nome_arquivo  
+
+filtrar com case incencitive 
+grep -i .
+
+filtrar buscando o primero caracter
+grep ^d
+ex.: ls -l /etc/ | grep ^d
+
+filtrar buscando excluido resuldado com o primero caracter
+grep ^d -v
+ex.: ls -l /etc/ | grep ^d -v
+
+Buscando com expressão regurar
+egrep
+retorna grifado May OU 2019
+Exp.: ls -l /etc/ | grep ^d -v | egrep "May|2019"
+
+retorna grifado May e 2019
+Exp.: ls -l /etc/ | grep ^d -v | egrep "May.*2019"
+
+Verificar quantas linhas, palavras e caracters
+wc nome_arquivo
+
+Separar arquivo por delimitador (delimitar vem depois do -d, neste exemplo é a virgula, -f para inforal qual coluna vai retornar)
+cut -d, -f 1 nome_arquivo
+
+*Colocando um delimitador de na saida
+cut -d, -f 1,2 --output-delimiter=" - Email:" nome_arquivo
+
+* trocar algo da saida
+cut -d, -f 1,2 --output-delimiter=" - Email:"  nome_arquivo | tr "<" "("
+
+* remover algo da saida
+cut -d, -f 1,2 --output-delimiter=" - Email:" nome_arquivo | tr -d "<|>"
+
+* Ordenar
+cut -d, -f 1,2 --output-delimiter=" - Email:" nome_arquivo | sort
+
+* Ordenar com valores unicos
+cut -d, -f 1,2 --output-delimiter=" - Email:" nome_arquivo | uniq
+
+* Ordenar com valores unicos numerando as linhas
+cut -d, -f 1,2 --output-delimiter=" - Email:" nome_arquivo | uniq | nl
+
+Outra alternativa para o cut
+awk -F '{print "Nome: " $1 "\nEmail: " $2}' nome_arquivo
+
+* ordenar
+cat nome_arquivo | sort | awk -F '{print "Nome: " $1 "\nEmail: " $2}'
+
+Compactadores
+#Zip Unzip
+*Compactar no formato zip recursivamente
+zip -r nome_arquivo_campactado.zip "diretorio/arquivo_a_compactar"
+Ex: zip -r bkp_etc.zip /etc/
+**descompactar
+unzip nome_arquivo_campactado.zip
+
+
+#Tar
+ * gzip, bzip2, compress
+tar <op-ções> [arquivo] <opções> || caminho_a_ser_compactado>
+opções:
+ c -> compactar
+ x -> Extrair
+ t -> Lista conteúdo
+
+ v -> Exibe o processo
+ p -> Preserva as permissões
+ r -> Acresenta arquivos dentro do pacote "tar"
+
+ z -> usa gzip
+ Z -> usa o compress
+ j -> usa o bzip2
+ f -> sempre usar, necessário para gerar o arquivo
+
+Ex gzip: tar czf bkp_etc.tar.bz2 /etc/
+Ex bzip2: tar cjf bkp_etc.tar.bz2 /etc/
+
+*Extrair
+Ex gzip: tar xzf bkp_etc.tar.bz2 /etc/
+Ex bzip2: tar xjf bkp_etc.tar.bz2 /etc/
+
+Sessão 7 - Gerencimanto do Sistema e do Hardware
+#Exebir informações do sistema e dokernel
+uname -a
+
+#Para identificar a distribuição
+*No centos
+cat /etc/redhat-release
+
+*No debian
+cat /etc/debian_version
+
+#Verificar quanto tempo a maquina esta ligada
+uptime
+
+#Verificar processos 
+top
+
+#Verificar inf da utilização da memória
+free -m
+
+#Vericar as partições montadas e uso do disco
+df -h
+
+#Verificar tamanho dos objetos no diretório
+du -h *
+*verificar quanto as pastas e objetos no nivel do diretório atual estão usando de disco
+du -sh *
+
+#Veriicar no cabeçalho do arquivo o formato do mesmo
+file nome_do_arquivo
+
+#Verificar usuarios logados
+*mais detelhado
+w
+*menos detalhado
+who
+
+#verificar usuário atualmente logado
+whoami
+
+#verificar o ip
+ifconfig
+
+#colocar um ip em um dev específico (apenas na sessão atual)
+ifconfig enp0s2 192.168.1.33 netmask 255.255.255.0
+
+#Verificar a rota
+route -n
+
+#definir um gatway específico
+route add default gw 192.168.1.1
+
+#Com o comando IP
+#listar os ips
+ip address ou ip addr list ou ip addr
+*de uma unica interface
+ip addr list enp0s3
+
+#Definir um ip
+ip address add 192.168.1.33/255.255.255.0 dev enp0s3
+
+#definir rota
+ip route add default via 192.168.1.1/24 dev enp0s3
+
+#remover a rota
+ip route del 192.168.1.1/24 dev enp0s3
+
