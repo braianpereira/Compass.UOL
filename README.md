@@ -81,3 +81,26 @@ _Ainda não realizado_
 
 #### 4. curso Segurança
 _Ainda não realizado_
+
+### Sprint 2
+
+#### Curso 1 - SQL
+ - Instalação de vm com windows
+ - Instalação do MySQL (Server, Workbench, Shell, Documentação e Exemplos)
+ - Introdução ao banco de dados
+ - Aprendendo as operações: 
+    1. CREATE DATABASE;
+    2. USE \<DATABASE\>;
+    3. CREATE TABLE \<TABLE\>;
+    4. SELECT \<OPERACAO>;
+    5. INSERT VALUES (<\REGISTROS>);
+    6. TABELA VERDADE;
+    7. Clausula WHERE;
+    8. Agrupamento
+ - Exercícios de fixação
+ - Modelagem de dados
+    1. Regra Formal
+        I. Todo campo vetorizado se tornará outra tabela
+        II. Todo campo multivalorizado se tornará outra tabela.
+        III. Toda tabela necessita de pelo menos um campo que identifique o registro como sendo unico (PK) 
+- Cardinalidade e obrigatoriedade
