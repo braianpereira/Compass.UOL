@@ -104,3 +104,6 @@ _Ainda não realizado_
         II. Todo campo multivalorizado se tornará outra tabela.
         III. Toda tabela necessita de pelo menos um campo que identifique o registro como sendo unico (PK) 
 - Cardinalidade e obrigatoriedade
+
+#### Curso 2
+    - Introdução aos

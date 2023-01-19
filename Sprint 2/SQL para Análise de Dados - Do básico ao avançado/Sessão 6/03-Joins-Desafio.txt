@@ -1,0 +1,32 @@
+-- EXERCÍCIOS ########################################################################
+
+-- (Exercício 1) Identifique quais as marcas de veículo mais visitada na tabela sales.funnel
+select
+	p.brand,
+	count(*) as visitas
+
+from sales.funnel as fun
+left join sales.products as p
+	on fun.product_id = p.product_id
+group by p.brand
+order by visitas desc;
+
+-- (Exercício 2) Identifique quais as lojas de veículo mais visitadas na tabela sales.funnel
+SELECT s.store_name, COUNT(*) as visitas
+FROM sales.funnel f
+LEFT JOIN sales.stores s on f.store_id = s.store_id
+GROUP BY s.store_name
+ORDER BY visitas DESC
+
+
+-- (Exercício 3) Identifique quantos clientes moram em cada tamanho de cidade (o porte da cidade
+-- consta na coluna "size" da tabela temp_tables.regions)
+select
+	r.size,
+	count(*) as contagem
+from sales.customers as c
+left join temp_tables.regions as r
+	on lower(c.city) = lower(r.city)
+	and lower(c.state) = lower(r.state)
+group by r.size
+order by contagem
