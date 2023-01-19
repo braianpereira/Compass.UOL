@@ -1,0 +1,26 @@
+### Site: [http://www.golismero.com/](http://www.golismero.com/)
+### GitHub: [https://github.com/golismero/golismero](https://github.com/golismero/golismero)
+
+Instalação
+
+#### Habilitando repositorio Strech no Kali Linux
+sudo vim /etc/apt/sources.list.d/debian.list
+deb [http://httpredir.debian.org/debian](http://httpredir.debian.org/debian) stretch main
+sudo apt update
+
+#### Feito isso, vamos instalar as dependencias:
+sudo su -l
+apt-get install docutils-doc docutils-common python-pygments
+apt-get install python2.7 python2.7-dev git perl nmap sslscan
+
+cd /opt
+wget https://bootstrap.pypa.io/get-pip.py
+python3 get-pip.py
+
+cd /opt
+git clone [https://github.com/golismero/golismero.git](https://github.com/golismero/golismero.git)
+cd golismero
+pip install -r requirements.txt
+pip install -r requirements_unix.txt
+ln -s ${PWD}/golismero.py /usr/bin/golismero
+exit
