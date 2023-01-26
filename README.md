@@ -105,5 +105,17 @@ _Ainda não realizado_
         III. Toda tabela necessita de pelo menos um campo que identifique o registro como sendo unico (PK) 
 - Cardinalidade e obrigatoriedade
 
-#### Curso 2
-    - Introdução aos
+### Sprint 3
+
+A linguagem Python é, sem dúvidas, uma das mais populares em projetos de dados. Nesta Sprint você irá conhecer as principais características da linguagem, sua sintaxe e características que a tornam tão aderente ao processamento de dados.
+
+#### Curso 1 - Sessões 16 - 19
+    - Introdução a OO
+    - Classes e seus elementos
+    - Objetos, abstração e Encapsulamento
+    - Heranças, Heranças multiplas e o método super()
+    - MRO, Polimorfismo e métodos mágicos
+    - Manipulando arquivos CSV
+    - Manipulando JSON
+    - Manipulação de data e hora, deltas
+    - Métodos de datas e hotas.
