@@ -86,11 +86,13 @@ LIMIT 10;
 -- Considere apresentar a coluna gastomedio arredondada na segunda casa decimal e ordenado de forma decrescente.
 
 -- Observação: Apenas vendas com status concluído.
+-- COLOCADO O ORDER BY após explicação do monitor e correção do retorno pelos responsáveis das atividas na Udemy
 SELECT estado,
        ROUND(AVG(qtd * vrunt),2) AS gastomedio
 FROM tbvendas
 WHERE status = 'Concluído'
-GROUP BY estado;
+GROUP BY estado
+ORDER BY gastomedio;
 
 -- E15
 -- Apresente a query para listar os códigos das vendas identificadas como deletadas. Apresente o resultado em ordem crescente.
