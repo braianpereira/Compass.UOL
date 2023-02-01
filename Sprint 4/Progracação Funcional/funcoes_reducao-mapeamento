@@ -1,0 +1,126 @@
+# Funções de redução
+# Funções de redução recebem um iterável e retornam um único elemento.
+
+
+# ANY()
+# any() retorna True se qualquer elemento da seqûencia for True (usando bool(elemento)) 
+# para todos os itens da sequência. 
+# Ou seja, a única maneira de ele ser False é que todos os elementos no iterável sejam falsos.
+
+lista = [[],'', {}, 0]
+
+any(lista) # False
+
+lista = [[1],'', {}, 0]
+
+any(lista) # True
+
+# ALL()
+# Diferente do any() o all() só retorna True, se todos os elementos da sequência, aplicados a bool() retornarem True.
+
+lista = [1, 2, 3, 4, 5]
+
+all(lista) # True
+
+lista = [0, 1, 2, 3, 4, 5]
+
+all(lista) # False
+
+# LEN()
+# len(), diferente das outras funções, efetua uma soma da quantidade de valores existentes em uma sequência.
+len([1,2,3,4,5]) # 5
+
+len('string') # 6
+
+# todas as classes de sequência tem que ter um __iter__() ou um __getitem__(). Mas, se você parar para notar, 
+# todas as sequências implementam __len__() também. Vamos conferir:
+
+'__len__' in dir([1,2,3]) # True
+'__len__' in dir('string') # True
+'__len__' in dir((1,2,3)) # True
+'__len__' in dir({1,2,3}) # True
+'__len__' in dir(4) # False
+
+# SUM()
+# A função embutida sum() executa uma somatória de todos os elementos da sequência.
+#  Por exemplo, se você tiver uma lista de números (int, float, complex, ...) 
+# ele vai fazer uma soma de elemento por elemento:
+lista = [1, 2, 3, 4, 5]
+
+# no caso da lista anterior
+((((1 + 2)+3)+4)+5) # 15
+
+# Uma coisa muito interessantes do sum é que ele não é sempre iniciado em 0, espera. 
+# Ele é sempre iniciado em 0, porém o segundo parâmetro de sum pode ser o seu valor inicial. Vamos tentar:
+lista = [1, 2, 3, 4, 5]
+
+sum(lista, 1) # 16
+
+###########################
+# Funções de mapeamento
+# As funções de mapeamento padrões da biblioteca padrão (zip(), enumerate() ,reversed()) 
+# são maneiras super interessantes de trabalhar com iteráveis, vamos lá.
+
+#  zip() e reversed()
+# A função zip não é uma função de compressão, como pode parecer. 
+# Ela funciona como um zipper, sabe, aquele da sua calça jeans? É tipo isso.
+lista = [1, 2, 3, 4, 5]
+lista_reversa = reversed(lista)
+
+list(zip(lista, lista_reversa)) # [(1, 5), (2, 4), (3, 3), (4, 2), (5, 1)]
+
+# Como o zip produz um iterador preguiçoso, 
+# não conseguimos acessar nenhum ítem pelo index,
+#  mas sim chamando a função embutida next(). 
+# Com isso podemos consumir um iterador sem acessar ele pelo index.
+print(zip(lista, lista_reversa)) # <zip object at xpto>
+print(reversed(lista)) # <list_reverseiterator object at xpto>
+'__str__' in reversed(lista) # False
+'__repr__' in reversed(lista) # False
+
+# Não temos um método para representar a saída do nosso objeto. Então, como faço pra ver?
+# construtor de uma lista
+print(list(reversed(lista))) # [5, 4, 3, 2, 1]
+
+# construtor de um conjunto
+print(set(reversed(lista))) # {5, 4, 3, 2, 1}
+
+# construtor de uma lista
+print(tuple(reversed(lista))) # (5, 4, 3, 2, 1)
+
+# enumerate()
+# A função enumerate() faz uma coisa muito parecida com o zip,
+# só que ele gera a sequência a ser zipada pra você. Olha que legal:
+list(enumerate([1,2,3])) # [(0, 1), (1, 2), (2, 3)]
+
+#  Toda a sua sequência é agrupada com o número do index dela.
+
+lista = [1, 2, 3, 4, 5]
+
+# iteração
+for x, y in enumerate(lista):
+    print(x, y)
+
+# 0 1
+# 1 2
+# 2 3
+# 3 4
+# 4 5
+
+# map()
+# Ela é uma função que chamamos de Função de ordem superior. 
+# Isso não é um conceito complicado, quer dizer que ela é uma 
+# função que recebe uma função como argumento. 
+# Existem muitos casos de como usar map(), mas uma coisa é certa, 
+# a função usada por map() só pode receber um argumento. Vamos ao código:
+def func(x):
+    """
+    Já usamos essa função, lembra?
+    """
+    return x + 2
+
+list(map(func, [1,2,3])) # [3, 4, 5]
+
+map(bool, [0, 1, 2]) # [False, True, True]
+# todas as funções embutidas do python que recebem só um único argumento podem ser usadas com map()
+
