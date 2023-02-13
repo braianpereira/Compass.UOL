@@ -1,4 +1,11 @@
 # Compass UOL
+
+## Sobre o Author
+Bráian Pereira 29 anos.
+Gosta de ler livros, principalmente de literatura fantastica e ouvir musica: Musica clásica e quse todos os subgeneros do Rock.
+Cursando o Tecnologia em Análise em Desenvolvimento de Sistemas no IFRS Campus Restinga.
+Atualmente trabalhando como desenvolvedor na empresa Talto onde exerce a função de criar e dar manunteção em sistemas erp e crm, principalmente em PHP, HTML e JS.
+
 ## D&A - AWS
 
 Repositório criado para exercítar e manter as anotações da trilha de aprendizado **D&A - AWS**.
@@ -7,11 +14,9 @@ Repositório criado para exercítar e manter as anotações da trilha de aprendi
 
 Projetos de dados pressupõem o uso de metodologias e ferramentas que são básicas ao dia-a-dia de trabalho. Aqui você terá contato com conceitos de gestão Ágil e framework SCRUM, bem como ferramentas de versionamento de código, a saber Git e seus principais serviços.
 
-#### 1. Curso SGRUM
- _Ainda não realizado_
+#### 1. Curso SCRUM
 
 #### 2. Curso GNU/List
-_Ainda não realizado_
 
 #### 3. Curso Git/GitHub
 - Criação de repositórios locais e remotos
@@ -119,3 +124,16 @@ A linguagem Python é, sem dúvidas, uma das mais populares em projetos de dados
     - Manipulando JSON
     - Manipulação de data e hora, deltas
     - Métodos de datas e hotas.
+
+### Sprint 4
+Sabemos que a Linguagem Python suporta expressar algoritmos em diferentes paradigmas, sendo um deles o Paradigma Funcional. Nesta Sprint você irá aprender alguns importantes conceitos de programação funcional, além de adentrar ao mundo dos containers com Docker e Kubertentes. Também daremos início à exploração do fascinante mundo da Aprendizagem de Máquina (Machine Learning).
+
+#### Curso 1 - Programação funcional
+
+#### Curso 2 - Programação funcional com Python 
+
+#### Docker para desenvolvedores
+
+#### Estatística Descritiva com Python
+
+

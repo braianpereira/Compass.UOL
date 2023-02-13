@@ -1,0 +1,54 @@
+# Verificar containers/imagens rodando
+docker ps ou docker container ls
+
+## Vericar container já executados
+docker ps -a
+
+# Rodar docker
+docker run ubuntu
+
+# Rodar docker abrindo o shell
+docker run -it ubuntu
+
+## sair do shell
+exit
+
+## deixar container executando no backgroud
+docker run -d ubuntu
+
+## Parar container 
+docker stop "nome_do_container"
+docker stop "id_do_container"
+
+## Expor portas (onde 81 é a porta do host e 80 é a porta do container)
+docker run -d -p 81:80 nginx
+
+# REiniciar docker pelo id
+docker start "id_do_container"
+
+# Dar nome para um container
+docker run -d -p 82:80 --name ngix_app nginx
+
+# Verificar logs pelo id ou nome
+docker logs "id_do_container"
+
+# Remover container (-f caso estaja em execução)
+docker -rm -f "id_do_container"
+
+# listar as imagens criadas
+docker image ls
+
+# Fazer o build da imagem
+docker build "diretorio da imagem"
+
+## Executar a imagem
+docker run "imagem"
+
+## Dar nome para a imagem
+docker tag "id_da_imagem" novo_nome:nova_teg
+
+## Nomear uma imagem durante o build
+docker build -t nome:tag .
+
+## rodando o bash de uma imagem já existente
+docker start -it <imagem>
